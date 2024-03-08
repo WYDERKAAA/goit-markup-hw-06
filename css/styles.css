@@ -1,5 +1,6 @@
+*,
 *::before,
-*::after * {
+*::after {
     box-sizing: border-box;
 }
 
@@ -80,7 +81,6 @@ section {
     text-decoration: none;
     color: #4d5ae5;
     margin-right: 76px;
-    display: inline-block;
 }
 
 .logo-dark {
@@ -90,7 +90,7 @@ section {
 .navigation {
     display: flex;
     align-items: center;
-    margin-right: auto;
+    justify-content: space-between;
 }
 
 .navigation-list {
@@ -559,4 +559,58 @@ section {
     position: absolute;
     left: 0;
     bottom: -1px;
+}
+
+/* footer SUBSCRIBE PART */
+
+.subscribe {
+    margin-left: 100px;
+}
+.subscribe-area {
+    gap: 24px;
+    display: flex;
+}
+.inputs {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    width: 264px;
+    height: 40px;
+    letter-spacing: 0.04em;
+    line-height: 2;
+    border-radius: 4px;
+    padding-left: 16px;
+    color: #fff;
+    border: 1px solid #fff;
+    align-content: center;
+    align-items: baseline;
+    outline: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: transparent;
+}
+.button-subscribe {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    height: 40px;
+    margin-left: 24px;
+    padding: 8px 24px;
+    border-radius: 4px;
+    min-width: 165px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: white;
+    background-color: #4d5ae5;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-footer-area {
+    margin-left: 16px;
+    fill: white;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
