@@ -364,10 +364,9 @@ img {
     cursor: pointer;
 }
 
-.portfolio-card:hover,
-.portfolio-card:focus {
+.portfolio-card:hover, .portfolio-card:focus{
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
-        0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-image {
@@ -576,11 +575,25 @@ img {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* .backdrop.is-hidden {
-     opacity: 0;
+/*? backdrop */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(46, 47, 66, 0.4);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
 
     pointer-events: none;
-} */
+}
 .button-close {
     position: absolute;
     width: 24px;
@@ -611,6 +624,7 @@ img {
 .data-form-input {
     display: flex;
     flex-direction: column;
+    gap: 8px;
 }
 .data-space {
     margin-bottom: 8px;
@@ -623,9 +637,12 @@ img {
     line-height: 1.17;
     padding: 0;
     display: block;
+    margin-bottom: 4px;
     letter-spacing: 0.04em;
 }
 .data-field {
+    width: 100%;
+    height: 40px;
     position: relative;
 }
 
@@ -648,7 +665,9 @@ img {
 .data-input-area:focus {
     border-color: #4d5ae5;
 }
-
+.comment-area {
+    margin-bottom: 16px;
+}
 .comment-box {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -658,7 +677,7 @@ img {
     line-height: 1.17;
     letter-spacing: 0.04em;
     padding: 8px 16px;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     border-radius: 4px;
     text-align: start;
     resize: none;
@@ -682,6 +701,7 @@ img {
 }
 .accept {
     display: flex;
+    margin-bottom: 24px;
 }
 .privacy-check {
     cursor: pointer;
@@ -739,11 +759,4 @@ input[type="checkbox"]:checked .ikon-privacy {
 }
 .privacy-link {
     color: #4d5ae5;
-}
-
-.icon-form {
-    position: absolute;
-    top: 50%;
-    left: 16px;
-    transform: translateY(-50%);
 }
