@@ -677,7 +677,7 @@ img {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.data-input-area .icon-form {
+.data-input-area:focus + .icon-form {
     fill: #4d5ae5;
 }
 
@@ -718,9 +718,7 @@ img {
 .privacy-check {
     cursor: pointer;
 }
-.privacy-check:checked + .data-details .ikon-privacy,
-.privacy-check:focus .ikon-privacy,
-input[type="checkbox"]:checked .ikon-privacy {
+.privacy-check:checked + .data-details .checkbox {
     fill: #f4f4fd;
     border: none;
     background-color: #404bbf;
@@ -776,13 +774,15 @@ input[type="checkbox"]:checked .ikon-privacy {
 .checkbox {
     width: 16px;
     height: 16px;
-    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    border: 1px solid rgba(46, 47, 66, 0.4);
     fill: transparent;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    transition-property: border, background-color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
