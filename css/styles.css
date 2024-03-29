@@ -438,7 +438,7 @@ img {
     color: #f4f4fd;
     letter-spacing: 0.02em;
     font-size: 16px;
-    font-weight: 500px;
+    font-weight: 400;
     line-height: 1.5;
     width: 264px;
     margin-bottom: 16px;
@@ -898,7 +898,7 @@ img {
     gap: 40px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .container {
         padding: 0 16px;
         max-width: 320px;
@@ -911,7 +911,7 @@ img {
 
     .hero-text {
         font-size: 36px;
-        padding: 0 52px;
+        max-width: 216px;
     }
 
     .hero .container {
@@ -1018,6 +1018,10 @@ img {
         margin: 0;
     }
 
+    .footer-bright-text {
+        margin: 0;
+    }
+
     .footer .logo {
         display: block;
         text-align: center;
@@ -1046,6 +1050,7 @@ img {
     }
 
     .subscribe-button {
+        margin: 0;
         max-width: 165px;
     }
 
@@ -1056,6 +1061,9 @@ img {
 }
 
 @media (min-width: 768px) and (max-width: 1158px) {
+    body {
+        line-height: initial;
+    }
     .container {
         max-width: 768px;
         padding: 0 16px;
@@ -1127,8 +1135,8 @@ img {
 
     .team-list {
         flex-wrap: wrap;
+        justify-content: center;
         gap: 64px 24px;
-        margin-left: 95px;
     }
 
     .card-member {
@@ -1158,7 +1166,8 @@ img {
     .footer .container {
         flex-wrap: wrap;
         gap: 72px 24px;
-        justify-content: center;
+        justify-content: flex-start;
+        max-width: 530px;
     }
 
     .footer-margin {
